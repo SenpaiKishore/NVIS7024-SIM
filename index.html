@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIS7024</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+        <img id="header-logo" src="nvisLogo.ico" alt="Logo">
+        <div id="header-company">Nvis Technologies Pvt Ltd</div>
+    </div>
+    <div id="header-title">BLDC(Brushless DC) Motor Training System</div>
+  </header>
+
+  <div id="app">
+    <svg class="svgOverlay">
+      <circle id="neutralCircle" r="8" stroke="black" stroke-width="2" fill="black" />
+      <circle id="liveCircle" r="8" stroke="black" stroke-width="2" fill="red" />
+
+      <line class="lines" id="mainLine1"/>
+      <line class="lines" id="mainLine2"/>
+
+      <line class="lines" id="smpsLine1"/>
+      <line class="lines" id="smpsLine2"/>
+
+      <line class="lines" id="powerLine1"/>
+      <line class="lines" id="powerLine2"/>
+
+      <line class="lines" id="motorLine1"/>
+      <line class="lines" id="motorLine2"/>
+
+      <line class="lines" id="voltLine1"/>
+      <line class="lines" id="voltLine2"/>
+
+      <line class="lines" id="lightLine1"/>
+      <line class="lines" id="lightLine2"/>
+      <line class="lines" id="lightLine3"/>
+
+      <line class="lines" id="switchLine"/>
+
+      <circle id="switchCircle1" r="4" stroke="black" stroke-width="2" fill="black" />
+      <circle id="switchCircle2" r="4" stroke="black" stroke-width="2" fill="black" />
+      <circle id="switchCircle3" r="4" stroke="black" stroke-width="2" fill="black" />
+
+      <text class="svgLabels" id="main-smpsText">230v AC</text>
+      <text class="svgLabels" id="switchText1">Motoring</text>
+      <text class="svgLabels" id="switchText2">Breaking</text>
+
+      <text class="svgLabels" id="main-smpsN">N</text>
+      <text class="svgLabels" id="main-smpsL">L</text>
+    </svg>
+    <div id="left-column">
+      <div class="powerSupply-box">
+        <button id="powerButton">Power</button>
+        <p>230V AC</p>
+      </div>
+      <div id="speedControl">
+        <p class="speedControlLabel">220V-240V -> 24V SMPS</p>
+        <img src="knob.png" id="knob" class="knob-img">
+        <div class="percetangeBox">
+          <p id="knobPercentage">0.00%</p>
+        </div>
+        <p class="speedControlLabel">Speed Control</p>
+      </div>
+    </div>
+    <div id="center-column">
+      <div id="switch-box">
+        <p id="switchLabel">Motoring Mode</p>
+        <img src="toggle.png" id="toggle" class="toggle-img">
+        <p id="switchLabel">Braking Mode</p>
+      </div>
+      <div id="switchCircuit-box">
+        <p id="switchCircuitLabel">SPDT Switch</p>
+      </div>
+      <div id="current-box">
+        <p id="currentLabel">0.00A</p>
+      </div>
+      <div id="circuitMotor">
+        <img src="motor.png" id="motor" class="motor-img">
+      </div>
+    </div>
+    <div id="right-column">
+      <div id="battery-parameters">
+          <div id="chart-container">
+            <canvas id="voltageChart"></canvas>
+          </div>
+          <div id="chart-container">
+            <canvas id="currentChart"></canvas>
+          </div>
+          <div id="chart-container">
+            <canvas id="powerChart"></canvas>
+          </div>
+      </div>
+      <div id="load-section">
+        <div class="loads">
+          <div id="voltage-box">
+            <p id="voltageLabel">0.00V</p>
+          </div>
+          <div class="light">
+            <img src="lightoff.png" id="lightImg" class="light-img">
+            <img src="lighton.png" id="lightImgOn" class="light-img">
+          </div>
+        </div>
+        <div id="motor-box">
+          <img src="tire.png" id="tire" class="tire-img">
+          <div class="rpm-container">
+            <p id="rpm">0 RPM</p>
+          </div>
+          <p class="motorLabel">PMSM Motor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

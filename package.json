@@ -1,0 +1,41 @@
+{
+  "name": "nvis425a",
+  "version": "1.0.0",
+  "description": "This application is a virtual simulation of the NVIS425A Battery Characterstics Training System.",
+  "main": "main.js",
+  "author": "NVIS",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-packager": "^17.1.2",
+    "canvas-gauges": "^2.1.7",
+    "chart.js": "^4.4.0",
+    "electron-builder": "^24.9.1",
+    "electron-is-dev": "^2.0.0",
+    "justgage": "^1.6.1"
+  },
+  "build": {
+    "appId": "com.nvis.425a",
+    "productName": "NVIS425A",
+    "win": {
+      "icon": "nvisLogo.ico",
+      "target": [
+        {
+          "target": "msi",
+          "arch": ["x64", "ia32"]
+        }
+      ]
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "nvisLogo.icns"
+    },
+    "files": ["**/*", "assets/**/*", "!**/*.map"]
+  }
+}
