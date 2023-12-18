@@ -99,7 +99,7 @@ header {
   border: 2px solid #000;
   border-radius: 12px;
   height: 80px;
-  margin: 50px 0 35px 0px;
+  margin: 50px 0 20px 0px;
   width: 165px;
   z-index: 1;
 }
@@ -110,16 +110,17 @@ header {
   background: white;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
+  padding: 15px;
   border: 2px solid #000;
   border-radius: 12px;
-  height: 320px;
+  height: 350px;
   margin: 5px 0px;
-  width: 200px;
+  width: 215px;
   z-index: 1;
 }
 
 .speedControlLabel {
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -136,17 +137,19 @@ header {
 }
 
 .knob-img {
-  width: 120px;
+  width: 105px;
 }
 
 
 #center-column {
   padding: 0;
   display: flex;
-  flex-direction: column;
-  margin: 10px 25px 10px 65px;
+  flex-direction: row !important;
+  margin: 10px 25px 10px 0;
+  width: 575px;
   height: 100%;
-  align-items: center;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
 
@@ -156,14 +159,20 @@ header {
 }
 
 .toggle-img{
-  width: 65px;
-  height: 100px;
+  width: 40px;
   rotate: -90deg;
 }
 
+.toggle1-img{
+  width: 40px;
+  rotate: 90deg;
+}
+
 #switchLabel{
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
   width: 25%;
+  text-align: center;
 }
 
 #switch-box{
@@ -173,9 +182,21 @@ header {
   background-color: white;
   border: 2px solid #000;
   border-radius: 12px;
-  width: 290px;
-  height: 170px;
+  width: 195px;
+  height: 55px;
+  margin-top: 15px;
   
+}
+
+#direction-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 195px;
+  height: 55px;
 }
 
 
@@ -236,6 +257,7 @@ header {
   height: 350px;
   justify-content: center;
   align-items: center;
+  margin-left: 500px;
 }
 
 .motorLabel {
@@ -248,7 +270,7 @@ header {
   border: 2px solid #000;
   padding: 10px;
   border-radius: 6px;
-  width: 65px;
+  width: 80px;
   text-align: center;
 }
 
@@ -279,8 +301,12 @@ header {
 }
 
 .motor-img{
-  width: 165px;
-  margin: 0 0 10px 0;
+  position: absolute;
+  height: 350px;
+  bottom: 15px;
+  left: 265px;
+  /* width: 165px; */
+  /* margin: 0 0 10px 0; */
 }
 
 #right-column {
@@ -310,7 +336,7 @@ header {
   background-color: white;
   border: 2px solid #000;
   border-radius: 12px;
-  width: 640px;
+  width: 780px;
   padding: 15px;
 }
 

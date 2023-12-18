@@ -28,29 +28,6 @@
       <line class="lines" id="smpsLine1"/>
       <line class="lines" id="smpsLine2"/>
 
-      <line class="lines" id="powerLine1"/>
-      <line class="lines" id="powerLine2"/>
-
-      <line class="lines" id="motorLine1"/>
-      <line class="lines" id="motorLine2"/>
-
-      <line class="lines" id="voltLine1"/>
-      <line class="lines" id="voltLine2"/>
-
-      <line class="lines" id="lightLine1"/>
-      <line class="lines" id="lightLine2"/>
-      <line class="lines" id="lightLine3"/>
-
-      <line class="lines" id="switchLine"/>
-
-      <circle id="switchCircle1" r="4" stroke="black" stroke-width="2" fill="black" />
-      <circle id="switchCircle2" r="4" stroke="black" stroke-width="2" fill="black" />
-      <circle id="switchCircle3" r="4" stroke="black" stroke-width="2" fill="black" />
-
-      <text class="svgLabels" id="main-smpsText">230v AC</text>
-      <text class="svgLabels" id="switchText1">Motoring</text>
-      <text class="svgLabels" id="switchText2">Breaking</text>
-
       <text class="svgLabels" id="main-smpsN">N</text>
       <text class="svgLabels" id="main-smpsL">L</text>
     </svg>
@@ -61,6 +38,19 @@
       </div>
       <div id="speedControl">
         <p class="speedControlLabel">220V-240V -> 24V SMPS</p>
+        <div class="switches">
+          <div id="direction-box">
+            <p id="switchLabel">Reverse</p>
+            <img src="toggle.png" id="toggle1" class="toggle1-img">
+            <p id="switchLabel">Forward</p>
+          </div>
+          <div id="switch-box">
+            <p id="switchLabel">Motoring Mode</p>
+            <img src="toggle.png" id="toggle" class="toggle-img">
+            <p id="switchLabel">Braking Mode</p>
+          </div>
+        </div>
+        
         <img src="knob.png" id="knob" class="knob-img">
         <div class="percetangeBox">
           <p id="knobPercentage">0.00%</p>
@@ -69,20 +59,13 @@
       </div>
     </div>
     <div id="center-column">
-      <div id="switch-box">
-        <p id="switchLabel">Motoring Mode</p>
-        <img src="toggle.png" id="toggle" class="toggle-img">
-        <p id="switchLabel">Braking Mode</p>
-      </div>
-      <div id="switchCircuit-box">
-        <p id="switchCircuitLabel">SPDT Switch</p>
+      <div id="voltage-box">
+        <p id="voltageLabel">0.00V</p>
       </div>
       <div id="current-box">
         <p id="currentLabel">0.00A</p>
       </div>
-      <div id="circuitMotor">
-        <img src="motor.png" id="motor" class="motor-img">
-      </div>
+      <img src="motor.png" id="motor" class="motor-img">
     </div>
     <div id="right-column">
       <div id="battery-parameters">
@@ -97,15 +80,6 @@
           </div>
       </div>
       <div id="load-section">
-        <div class="loads">
-          <div id="voltage-box">
-            <p id="voltageLabel">0.00V</p>
-          </div>
-          <div class="light">
-            <img src="lightoff.png" id="lightImg" class="light-img">
-            <img src="lighton.png" id="lightImgOn" class="light-img">
-          </div>
-        </div>
         <div id="motor-box">
           <img src="tire.png" id="tire" class="tire-img">
           <div class="rpm-container">
